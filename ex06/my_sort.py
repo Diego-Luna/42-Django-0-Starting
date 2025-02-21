@@ -28,7 +28,8 @@ def my_sort():
     )
 
     for name, year in sorted_pairs:
-        print(name, " : ", year)
+        # print(name, " : ", year)
+        print(name)
 
 if __name__ == '__main__':
     my_sort()
