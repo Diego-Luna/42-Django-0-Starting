@@ -49,12 +49,12 @@ class Table_element:
         '''
 
 def group_elements_by_position(elements):
-    groups = [[] for _ in range(18)]  # posiciones 0 a 17
+    groups = [[] for _ in range(18)]
     for element in elements:
         try:
             pos = int(element.get_position())
         except ValueError:
-            continue  # o maneja el error según convenga
+            continue 
         if 0 <= pos < 18:
             groups[pos].append(element)
     return groups
@@ -142,7 +142,6 @@ def crete_html():
 </html>
         '''
 
-
         # Todo: Write the html to a file
         with open("periodic_table.html", "w") as file:
             file.write(html)
@@ -152,7 +151,6 @@ def crete_html():
         print("File not found")
     except:
         print("An error occurred")
-
 
 
 if __name__ == '__main__':
